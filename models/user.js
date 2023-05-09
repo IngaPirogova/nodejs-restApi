@@ -28,7 +28,13 @@ const userSchema = Schema({
         token: {
           type: String,
           default: null,
-        },            
+        },  
+        
+        avatarURL: {
+          type: String,   
+          required: [true, 'Here is a link to the image'],      
+        },
+
 }, {versionKey: false, timestamps: true});
 
 userSchema.methods.setPassword = function(password){
